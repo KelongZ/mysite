@@ -19,7 +19,7 @@ from blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index', views.hello),
+    path('index/', views.hello),
     path('test/', views.test),
     path('', views.index, name='index'),
     path('articles/<int:year>/<int:month>/', views.year_archive),
