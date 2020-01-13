@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -25,13 +25,10 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="4e9ccde2-9654-4117-8ba4-7a8bd244ef9a">
-        <schema name="main" object-types="view, constraint, dataset trigger, table, index, column" />
+        <schema name="main" object-types="view, column, index, dataset trigger, constraint, table" />
       </connection>
       <connection connection-id="fd04bc7f-9444-4ba1-91a0-9d29c33961f2">
-        <schema name="db_spider" object-types="view, constraint, function, dataset trigger, procedure, table, index, column" />
-        <schema name="mysql" object-types="table" />
-        <schema name="sys" object-types="view, function, procedure, table" />
-        <schema name="test" object-types="view, function, procedure, table" />
+        <schema name="db_spider" object-types="view, table" />
       </connection>
     </loaded-nodes>
   </component>

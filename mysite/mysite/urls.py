@@ -24,5 +24,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('articles/<int:year>/<int:month>/', views.year_archive),
     re_path(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/(?P<slug>.*?)/$', views.article_detail),
-    # path('orm/', views.orm),
+    path('orm/', views.orm),
 ]
