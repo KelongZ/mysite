@@ -40,6 +40,11 @@ def orm(request):
 
     # 把标题'增加标题二'，修改成'我被修改了'。将指定条件的数据更新，支持 **kwargs，支持字典。
     #title = models.Article.objects.filter(title='增加标题二').update(title='我被修改了')
-    all_article = models.Article.objects.all()
-    print(all_article)
+    #all_article = models.Article.objects.all()
+    #print(all_article)
+    article = models.Article.objects.filter(id__range=[2,3])
+    article_values = models.Article.objects.filter(id__range=[2, 3]).values()
+    print(article)
+    print('--------------------------------------------------------------')
+    print(article_values)
     return HttpResponse('orm')
