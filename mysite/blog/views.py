@@ -48,3 +48,6 @@ def orm(request):
     print('--------------------------------------------------------------')
     print(article_values)
     return HttpResponse('orm')
+
+def story(request):
+    return HttpResponse('new story!')

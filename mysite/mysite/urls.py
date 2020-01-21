@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from blog import views
 
 urlpatterns = [
@@ -25,4 +25,6 @@ urlpatterns = [
     path('articles/<int:year>/<int:month>/', views.year_archive),
     re_path(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/(?P<slug>.*?)/$', views.article_detail),
     path('orm/', views.orm),
+
+    path('blog/', include('blog.urls'))
 ]
