@@ -25,7 +25,7 @@ class ArticleAdmin(admin.ModelAdmin):
     # actions_on_bottom = True
 
     def func(self, request, queryset):
-        queryset.update(create_time='2018-09-28')
+        queryset.update(created_time='2018-09-28')
         #批量更新我们的created_time字段的值为2018-09-28
     func.short_description =  "中文显示自定义Actions"
     actions = [func,]

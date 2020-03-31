@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="func1()">ajax提交</button>
+<script src="/static/jquery-3.4.1.js"></script>
+<script>
+    function func1() {
+    	Test()
+    }
+
+    function Test() {
+    	// $.post("/jquery_get/")
+    	//$.get("/jquery_get/")
+    	//$.post("/jquery_get/",{name:"alex"})
+    	//$.get("/jquery_get/",{name:"alex"})
+
+    	// 回调函数
+    	// $.post("/jquery_get/",{name:"alex"},function (data,stateText,obj) {
+    	// 	//console.log(arguments)
+    	// 	console.log(data)
+    	// 	console.log(stateText)
+    	// 	console.log(obj)
+    	// })
+
+    	// $.getScript("/static/test.js", function (){alert(add(2,5))})
+    	$.ajax({
+    		url:"/jquery_get/",
+    		type:"post",
+    		data:{
+    			a:1,
+    			b:[3,4]
+    		},
+    		traditional:true, 
+    		//processData:false,
+    		//contentType:json,
+    		dataType:"json",
+    		success: function (data) {
+    			console.log(data)
+    		}
+    	})
+
+    }
+
+</script>
+</body>
+</html>
